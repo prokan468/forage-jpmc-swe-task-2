@@ -24,11 +24,15 @@ class App extends Component<{}, IState> {
       // We use this state to parse data down to the child element (Graph) as element property
       data: [],
       showGraph: false,
+      //to insure that graph is not shown in the start but
+      // rather only shown when the start streaming data is clicked.
     };
   }
 
   /**
    * Render Graph react component with state.data parse as property data
+   * added a condition to render the graph when the application state’s
+   * `showGraph` property is `true`
    */
   renderGraph() {
     if(this.state.showGraph){
